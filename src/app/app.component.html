@@ -1,38 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
   <h1>
-    bienvenue dans la tour des {{ heroes.length}} heros !!!
+    bienvenue dans la tour des Zeros !!!
      <!-- {{title}} une façon d'ecrire d'angular -->
   </h1>
-  
-<p>
-  bonjour, {{name | uppercase}}
-  <!-- | "pipe = uppercase" servent a transformer notre variable -->
-</p>
-<!-- two way binding -->
-Votre nom : <input type="text" name='name' id="name" [(ngModel)]='name' />
-
-<!-- ici lien doucle [script vers template] (template vers script) -->
-<!-- parenthese sont pour reagire a un evenement -->
 
 
-<!-- for(var el in monTableau){}  
-  ==
-  for(var i= 0 ; i<monTableau.length; i++){ var el = monTableau[i]} ==
-for(var el of monTableau){} -->
-<!-- <ul>
-  <li *ngFor="let hero of heroes">{{ hero }} <span *ngIf="hero === name">(c'est moi !)</span> </li>
-  !-- pour chacun de mes heros, tu va créer un li 
-  et dedans tu affichera le nom du hero avec {{nom Du Hero }}  --
-</ul> -->
-<app-heroes-list></app-heroes-list>
-
-
-<p>nom du Hero <input type="text" name="heroToAdd" id="heroName"[(ngModel)]="heroToAdd" /> 
-
-
-<button (click)="addHero()">ajouter un hero</button></p> 
-<!-- <button (click) > <balise (evenement)="nom de l'instruction"> -->
 
 <router-outlet></router-outlet>
 <!-- router-outlet == balise propre a angular -->
+

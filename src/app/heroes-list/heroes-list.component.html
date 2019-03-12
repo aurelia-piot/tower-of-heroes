@@ -1,3 +1,26 @@
+<ul class="heroes">
+  <li
+    [class.selected]="hero === selectedHero"
+    (click)="selectHero(hero)"
+    *ngFor="let hero of heroes"
+  >
+    <span class="badge">{{ hero.id }}</span>
+    <span class="text">{{ hero.name }}</span>
+  </li>
+  <!-- pour chacun de mes heros, tu va créer un li et dedans tu affichera le nom du hero avec {{nom Du Hero }}  -->
+</ul>
+
 <p>
-  heroes-list works!
-</p>
+  Nom du Hero
+  <input type="text" name="heroToAdd" id="heroName" [(ngModel)]="heroToAdd" />
+
+  <button (click)="addHero()">ajouter un hero</button></p>
+  <app-hero-details [hero]="selectedHero" *ngIf="selectedHero"></app-hero-details>
+
+
+<!-- <section *ngIf="selectedHero">
+  !-- si selectedHero est non-null il sera vrais et donc visible sinon non  --
+  <h2>Details du héros : {{ selectedHero.name }}</h2>
+  <div><span>{{ selectedHero.id}} </span>{{selectedHero.name}} </div>
+</section> -->
+<!-- <button (click) > <balise (evenement)='nom de l'instruction'> -->
